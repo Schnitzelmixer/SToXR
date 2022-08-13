@@ -47,9 +47,9 @@ You will receive a short story intro. You enter your neighbors house while he is
   ## Game events
 
   ### Spider
-  In the guest room, in the right corner of the room next to `riddle-g`, there is a small spider that attacks the player when they get too close and then runs away after a while when they are too far away again.
+  In the guest room, in the right corner of the room next to `riddle-g`, there is a small spider that follows and attacks the player when they get too close and then runs away when they are too far away again.
 
-  TODO picture
+  ![image](./LabRecordings/spider.jpg)
 
   ### Rain
   After three minutes it starts to rain, you can hear but also see the rain if you look out of the windows. Another three minutes later the rain sounds get louder, hinting at more intense rain.
@@ -62,7 +62,7 @@ You will receive a short story intro. You enter your neighbors house while he is
 
 
   ### Flickering lights
-  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
+  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off aswell as the time them staying off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
 
   ### TV
   After about one and a half minutes the TV will start to play a cute and funny short documentary about a wild hamster, immediately after the video concludes another one will start to play. This second video contains disturbing sounds and images of pigs locked up in a CO2 stunning chamber right before their slaughter. 
@@ -88,7 +88,9 @@ You will receive a short story intro. You enter your neighbors house while he is
   ### Dangerous items 
   Some items placed around the apartment are 'dangerous' and will cause the controllers to vibrate once they get near them and picking them up will vibrate at maximum intensity. These items include a gun in the desk drawer, a stack of money near the bed in the bedroom and a baseball bat in the corner of the bedroom closet.
 
-  TODO pictures
+  ![image](./LabRecordings/pistol.jpg)
+  ![image](./LabRecordings/money.jpg)
+  ![image](./LabRecordings/baseball.jpg)
 
   ## Unlocking the tablet
   Once you have found all notes and solved all riddles you will end up with the letters `A`, `G`, `M` and `E`. You should have also found the `I AM GOLDEN` clue scattered multiple times across the apartment. 
@@ -99,7 +101,7 @@ You will receive a short story intro. You enter your neighbors house while he is
   
   ![image](./LabRecordings/tablet.jpg)
 
-  To figure out the correct order of the letters/numbers you should try and find a word. Once you find the word `GAME` and type in the translated number code `4892` on the tablet, you will find it unlocked, revealing various calendar events and emails, but before you really get to read them you hear a gun cocking and your blood scattered across the screen.
+  To figure out the correct order of the letters/numbers you should try and find a word. Once you find the word `GAME` and type in the translated number code `4892` on the tablet, you will find it unlocked, revealing various calendar events and emails, but before you really get to read them you hear a gun cocking and see your blood scattered across the screen.
 </details>
 <br>
 
@@ -128,6 +130,9 @@ This question was answered similarly to the previous one but a bit more positive
 
 ## Conclusion
 We were able to evoke negative emotions but more so stress, anxiousness and tension rather than fear and distress. This might have been due to the setting of the event creating artificial stress and pressure of time. While we were hoping to evoke stronger emotions by keeping the players invested into the experience with exploration and puzzles these elements seemed to evoke fun and did motivate to keep playing until the riddles are solved. All in all we are happy with the results and believe we have sufficiently evoked the emotions we wanted to evoke.
+
+# Project Overview/ Documentation
+Detailed Information about the structure, classes and descriptions of them can be found on the [wiki home page](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/wikis/home)
 
 # Sources
 The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/wikis/home)
