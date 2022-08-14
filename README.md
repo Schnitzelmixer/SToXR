@@ -1,213 +1,218 @@
 # How to start
-1. Clone/fork this repository (branch/commit here?)  
+1. Clone/fork this repository  
 2. Open the root of this repository in Unity
 3. If you get a warning popup about disabling the old `UnityEngine.Input` API, press `NO`  
   ![image](./LabRecordings/popup-press-no.jpg)
     - If you accidentally pressed `YES`, you should still be able to switch to the old input manager in the project settings under `Player`:
     ![image](./LabRecordings/switch-input-manager.png)
-4. Open the `IntroScene.unity`
+4. Open the `IntroScene.unity` (stoxr-project-2\Assets\Brick Project Studio\Apartment Kit\Scenes)
 5. Press the 'Play'-button
 
-# Project Overview/ Documentation
-This section contains a descriptive overview about the structure and code of this project.
+# Project Overview/ Extended Documentation
+<details> 
+  <summary>This section contains a descriptive overview about the structure and classes of this project.</summary>
 
-On the top level of the directory structure are mostly default directories. Our relevant code is inside of the *Assets* folder.
-Inside of this folder the following directory structure can be seen (nested files and directories aren't shown here):
-```
-│
-├── Baseball Bats\
-│
-├── Blood decal pack\
-│
-├── Brick Project Studio\
-│
-├── EffectExamples\
-│
-├── Flashlights\
-│
-├── HDRPDefaultResources\
-│
-├── Heist Unity\
-│
-├── Oculus\
-│
-├── Own Assets\
-│
-├── PB_Spider\
-│
-├── Resources\
-│
-├── SkySeries Freebie\
-|
-├── TextMesh Pro\
-│
-└── XR\
-```
+  ## Directory structure
+  On the top level of the directory structure are mostly default directories. Our relevant code is inside of the *Assets* folder.
+  Inside of this folder the following directory structure can be seen (nested files and directories aren't shown here for clarity):
+  ```
+  │
+  ├── Baseball Bats\
+  │
+  ├── Blood decal pack\
+  │
+  ├── Brick Project Studio\
+  │
+  ├── EffectExamples\
+  │
+  ├── Flashlights\
+  │
+  ├── HDRPDefaultResources\
+  │
+  ├── Heist Unity\
+  │
+  ├── Oculus\
+  │
+  ├── Own Assets\
+  │
+  ├── PB_Spider\
+  │
+  ├── Resources\
+  │
+  ├── SkySeries Freebie\
+  |
+  ├── TextMesh Pro\
+  │
+  └── XR\
+  ```
+  A lot of these directories are packages that we imported for models, animations, audio files etc. *Own Assets* is an exception here, as there are some small models (tablet, notes)that we created ourselfs lying inside this directory. 
+  All necessary files, (Meshes, materials, animations, scripts...) are within their respective directory, e.g. the Flashlight files are within the *FLashlights* directory, although the naming of the directories sometimes refers to their imported package name.
+  If the necessary files aren't in their respective directory, then they are in the *Brick Project Studio* directory, which forms the baseline of this project, as this package contains the apartment. The directory tree of *Brick Project Studio* looks like this (files are not listed for clarity):
+  ```
+  │
+  ├── Apartment Kit\
+  │   │
+  │   ├── Materials\
+  │   │   │
+  │   │   ├── Interior Exterior\
+  │   │   │
+  │   │   ├── Misc\
+  │   │   │   │
+  │   │   │   └── Materials\
+  │   │   │
+  │   │   │
+  │   │   └── Surface\
+  │   │
+  │   │
+  │   ├── Models\
+  │   │
+  │   ├── Prefabs\
+  │   │   │
+  │   │   ├── Apt Build Kit\
+  │   │   │   │
+  │   │   │   ├── Exteriors\
+  │   │   │   │   │
+  │   │   │   │   └── Ext_Apt_01\
+  │   │   │   │
+  │   │   │   │
+  │   │   │   └── Interiors\
+  │   │   │       │
+  │   │   │       ├── Flooring & Ceilings\
+  │   │   │       │
+  │   │   │       ├── Frames Windows & Doors\
+  │   │   │       │
+  │   │   │       ├── Wall Tiles\
+  │   │   │       │
+  │   │   │       └── Walls Frames & Doors\
+  │   │   │
+  │   │   │
+  │   │   │
+  │   │   ├── Furniture\
+  │   │   │   │
+  │   │   │   ├── Bathroom\
+  │   │   │   │
+  │   │   │   ├── Bedroom\
+  │   │   │   │
+  │   │   │   ├── Kitchen\
+  │   │   │   │   │
+  │   │   │   │   ├── Appliances\
+  │   │   │   │   │
+  │   │   │   │   └── Cabinets\
+  │   │   │   │
+  │   │   │   │
+  │   │   │   ├── Living Room\
+  │   │   │   │
+  │   │   │   └── Wine Cabinet\
+  │   │   │
+  │   │   │
+  │   │   ├── Props\
+  │   │   │   │
+  │   │   │   ├── Art\
+  │   │   │   │
+  │   │   │   ├── Bathroom\
+  │   │   │   │
+  │   │   │   ├── Electronics\
+  │   │   │   │
+  │   │   │   ├── Lighting\
+  │   │   │   │
+  │   │   │   ├── Misc\
+  │   │   │   │
+  │   │   │   └── Wine Liquor Beer and Glassware - Sample\
+  │   │   │
+  │   │   │
+  │   │   └── Structures\
+  │   │
+  │   │
+  │   ├── Scenes\
+  │   │   
+  │   ├── Scripts & Animation\
+  │   │   │
+  │   │   ├── Closet\
+  │   │   │
+  │   │   ├── Grabbable\
+  │   │   │
+  │   │   ├── Light_flickering\
+  │   │   │
+  │   │   ├── Managers\
+  │   │   │
+  │   │   ├── OvenOpen\
+  │   │   │
+  │   │   ├── Slide\
+  │   │   │
+  │   │   ├── Spider_movement\
+  │   │   │
+  │   │   ├── TableFlip\
+  │   │   │
+  │   │   ├── Tablet\
+  │   │   │
+  │   │   ├── Weather\
+  │   │   │
+  │   │   ├── Windows\
+  │   │   │
+  │   │   └── Z Axis -1\
+  │   │
+  │   │
+  │   ├── Sounds\
+  │   │
+  │   ├── Textures\
+  │   │   │
+  │   │   ├── Interior Exterior\
+  │   │   │
+  │   │   ├── Misc\
+  │   │   │   │
+  │   │   │   └── Materials\
+  │   │   │
+  │   │   │
+  │   │   └── Surface\
+  │   │
+  │   │
+  │   └── Videos\
+  │
+  │
+  └── SE Basic Assets\
+      │
+      ├── Materials\
+      │   │
+      │   └── Fire\
+      │
+      │
+      ├── Models\
+      │   │
+      │   └── Build Kits\
+      │
+      │
+      ├── Prefabs\
+      │   │
+      │   └── Fire\
+      │
+      │
+      ├── Scripts and Animations\
+      │   │
+      │   ├── Doors\
+      │   │
+      │   ├── Drawer\
+      │   │   │
+      │   │   ├── X Axis\
+      │   │   │
+      │   │   └── Z Axis\
+      │   │
+      │   │
+      │   └── Windows\
+      │
+      │
+      └── Textures\
+          │
+          └── Fire\
+  ```
+  As you can see there are two directories, *Apartment Kit* and *SE Basic Assets*.
+  Latter contains many default files, which we used. We didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files. For example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here aswell as the video clips.
+  Despite the fact, that there are quite a few directories in this project, this description focused on the seperation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
 
-```
-│
-├── Apartment Kit\
-│   │
-│   ├── Materials\
-│   │   │
-│   │   ├── Interior Exterior\
-│   │   │
-│   │   ├── Misc\
-│   │   │   │
-│   │   │   └── Materials\
-│   │   │
-│   │   │
-│   │   └── Surface\
-│   │
-│   │
-│   ├── Models\
-│   │
-│   ├── Prefabs\
-│   │   │
-│   │   ├── Apt Build Kit\
-│   │   │   │
-│   │   │   ├── Exteriors\
-│   │   │   │   │
-│   │   │   │   └── Ext_Apt_01\
-│   │   │   │
-│   │   │   │
-│   │   │   └── Interiors\
-│   │   │       │
-│   │   │       ├── Flooring & Ceilings\
-│   │   │       │
-│   │   │       ├── Frames Windows & Doors\
-│   │   │       │
-│   │   │       ├── Wall Tiles\
-│   │   │       │
-│   │   │       └── Walls Frames & Doors\
-│   │   │
-│   │   │
-│   │   │
-│   │   ├── Furniture\
-│   │   │   │
-│   │   │   ├── Bathroom\
-│   │   │   │
-│   │   │   ├── Bedroom\
-│   │   │   │
-│   │   │   ├── Kitchen\
-│   │   │   │   │
-│   │   │   │   ├── Appliances\
-│   │   │   │   │
-│   │   │   │   └── Cabinets\
-│   │   │   │
-│   │   │   │
-│   │   │   ├── Living Room\
-│   │   │   │
-│   │   │   └── Wine Cabinet\
-│   │   │
-│   │   │
-│   │   ├── Props\
-│   │   │   │
-│   │   │   ├── Art\
-│   │   │   │
-│   │   │   ├── Bathroom\
-│   │   │   │
-│   │   │   ├── Electronics\
-│   │   │   │
-│   │   │   ├── Lighting\
-│   │   │   │
-│   │   │   ├── Misc\
-│   │   │   │
-│   │   │   └── Wine Liquor Beer and Glassware - Sample\
-│   │   │
-│   │   │
-│   │   └── Structures\
-│   │
-│   │
-│   ├── Scenes\
-│   │   │
-│   │   ├── Kopien\
-│   │   │   │
-│   │   │   └── Scene_01_Julian\
-│   │   │
-│   │   │
-│   │   └── Scene_01_Julian\
-│   │
-│   │
-│   ├── Scripts & Animation\
-│   │   │
-│   │   ├── Closet\
-│   │   │
-│   │   ├── Grabbable\
-│   │   │
-│   │   ├── Light_flickering\
-│   │   │
-│   │   ├── Managers\
-│   │   │
-│   │   ├── OvenOpen\
-│   │   │
-│   │   ├── Slide\
-│   │   │
-│   │   ├── Spider_movement\
-│   │   │
-│   │   ├── TableFlip\
-│   │   │
-│   │   ├── Tablet\
-│   │   │
-│   │   ├── Weather\
-│   │   │
-│   │   ├── Windows\
-│   │   │
-│   │   └── Z Axis -1\
-│   │
-│   │
-│   ├── Sounds\
-│   │
-│   ├── Textures\
-│   │   │
-│   │   ├── Interior Exterior\
-│   │   │
-│   │   ├── Misc\
-│   │   │   │
-│   │   │   └── Materials\
-│   │   │
-│   │   │
-│   │   └── Surface\
-│   │
-│   │
-│   └── Videos\
-│
-│
-└── SE Basic Assets\
-    │
-    ├── Materials\
-    │   │
-    │   └── Fire\
-    │
-    │
-    ├── Models\
-    │   │
-    │   └── Build Kits\
-    │
-    │
-    ├── Prefabs\
-    │   │
-    │   └── Fire\
-    │
-    │
-    ├── Scripts and Animations\
-    │   │
-    │   ├── Doors\
-    │   │
-    │   ├── Drawer\
-    │   │   │
-    │   │   ├── X Axis\
-    │   │   │
-    │   │   └── Z Axis\
-    │   │
-    │   │
-    │   └── Windows\
-    │
-    │
-    └── Textures\
-        │
-        └── Fire\
-```
+  ## UML Class Diagrams
+  ![image](./UMLs/Scenes.png)
+  ![image](./UMLs/GameEventManager.png)
+  ![image](./UMLs/IndividualScripts.png)
+</details> 
 
 # User interaction
 You will receive a short story intro. You enter your neighbors house while he is away to find evidence against him. To unlock his tablet you need to find 4 paper notes, each of them containing a riddle. Can you crack the code and find out the password?
