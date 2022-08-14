@@ -8,6 +8,207 @@
 4. Open the `IntroScene.unity`
 5. Press the 'Play'-button
 
+# Project Overview/ Documentation
+This section contains a descriptive overview about the structure and code of this project.
+
+On the top level of the directory structure are mostly default directories. Our relevant code is inside of the *Assets* folder.
+Inside of this folder the following directory structure can be seen (nested files and directories aren't shown here):
+```
+│
+├── Baseball Bats\
+│
+├── Blood decal pack\
+│
+├── Brick Project Studio\
+│
+├── EffectExamples\
+│
+├── Flashlights\
+│
+├── HDRPDefaultResources\
+│
+├── Heist Unity\
+│
+├── Oculus\
+│
+├── Own Assets\
+│
+├── PB_Spider\
+│
+├── Resources\
+│
+├── SkySeries Freebie\
+|
+├── TextMesh Pro\
+│
+└── XR\
+```
+
+```
+│
+├── Apartment Kit\
+│   │
+│   ├── Materials\
+│   │   │
+│   │   ├── Interior Exterior\
+│   │   │
+│   │   ├── Misc\
+│   │   │   │
+│   │   │   └── Materials\
+│   │   │
+│   │   │
+│   │   └── Surface\
+│   │
+│   │
+│   ├── Models\
+│   │
+│   ├── Prefabs\
+│   │   │
+│   │   ├── Apt Build Kit\
+│   │   │   │
+│   │   │   ├── Exteriors\
+│   │   │   │   │
+│   │   │   │   └── Ext_Apt_01\
+│   │   │   │
+│   │   │   │
+│   │   │   └── Interiors\
+│   │   │       │
+│   │   │       ├── Flooring & Ceilings\
+│   │   │       │
+│   │   │       ├── Frames Windows & Doors\
+│   │   │       │
+│   │   │       ├── Wall Tiles\
+│   │   │       │
+│   │   │       └── Walls Frames & Doors\
+│   │   │
+│   │   │
+│   │   │
+│   │   ├── Furniture\
+│   │   │   │
+│   │   │   ├── Bathroom\
+│   │   │   │
+│   │   │   ├── Bedroom\
+│   │   │   │
+│   │   │   ├── Kitchen\
+│   │   │   │   │
+│   │   │   │   ├── Appliances\
+│   │   │   │   │
+│   │   │   │   └── Cabinets\
+│   │   │   │
+│   │   │   │
+│   │   │   ├── Living Room\
+│   │   │   │
+│   │   │   └── Wine Cabinet\
+│   │   │
+│   │   │
+│   │   ├── Props\
+│   │   │   │
+│   │   │   ├── Art\
+│   │   │   │
+│   │   │   ├── Bathroom\
+│   │   │   │
+│   │   │   ├── Electronics\
+│   │   │   │
+│   │   │   ├── Lighting\
+│   │   │   │
+│   │   │   ├── Misc\
+│   │   │   │
+│   │   │   └── Wine Liquor Beer and Glassware - Sample\
+│   │   │
+│   │   │
+│   │   └── Structures\
+│   │
+│   │
+│   ├── Scenes\
+│   │   │
+│   │   ├── Kopien\
+│   │   │   │
+│   │   │   └── Scene_01_Julian\
+│   │   │
+│   │   │
+│   │   └── Scene_01_Julian\
+│   │
+│   │
+│   ├── Scripts & Animation\
+│   │   │
+│   │   ├── Closet\
+│   │   │
+│   │   ├── Grabbable\
+│   │   │
+│   │   ├── Light_flickering\
+│   │   │
+│   │   ├── Managers\
+│   │   │
+│   │   ├── OvenOpen\
+│   │   │
+│   │   ├── Slide\
+│   │   │
+│   │   ├── Spider_movement\
+│   │   │
+│   │   ├── TableFlip\
+│   │   │
+│   │   ├── Tablet\
+│   │   │
+│   │   ├── Weather\
+│   │   │
+│   │   ├── Windows\
+│   │   │
+│   │   └── Z Axis -1\
+│   │
+│   │
+│   ├── Sounds\
+│   │
+│   ├── Textures\
+│   │   │
+│   │   ├── Interior Exterior\
+│   │   │
+│   │   ├── Misc\
+│   │   │   │
+│   │   │   └── Materials\
+│   │   │
+│   │   │
+│   │   └── Surface\
+│   │
+│   │
+│   └── Videos\
+│
+│
+└── SE Basic Assets\
+    │
+    ├── Materials\
+    │   │
+    │   └── Fire\
+    │
+    │
+    ├── Models\
+    │   │
+    │   └── Build Kits\
+    │
+    │
+    ├── Prefabs\
+    │   │
+    │   └── Fire\
+    │
+    │
+    ├── Scripts and Animations\
+    │   │
+    │   ├── Doors\
+    │   │
+    │   ├── Drawer\
+    │   │   │
+    │   │   ├── X Axis\
+    │   │   │
+    │   │   └── Z Axis\
+    │   │
+    │   │
+    │   └── Windows\
+    │
+    │
+    └── Textures\
+        │
+        └── Fire\
+```
+
 # User interaction
 You will receive a short story intro. You enter your neighbors house while he is away to find evidence against him. To unlock his tablet you need to find 4 paper notes, each of them containing a riddle. Can you crack the code and find out the password?
 
@@ -130,9 +331,6 @@ This question was answered similarly to the previous one but a bit more positive
 
 ## Conclusion
 We were able to evoke negative emotions but more so stress, anxiousness and tension rather than fear and distress. This might have been due to the setting of the event creating artificial stress and pressure of time. While we were hoping to evoke stronger emotions by keeping the players invested into the experience with exploration and puzzles these elements seemed to evoke fun and did motivate to keep playing until the riddles are solved. All in all we are happy with the results and believe we have sufficiently evoked the emotions we wanted to evoke.
-
-# Project Overview/ Documentation
-Detailed Information about the structure, classes and descriptions of them can be found on the [wiki home page](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/wikis/home)
 
 # Sources
 The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/wikis/home)
