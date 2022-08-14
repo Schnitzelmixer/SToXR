@@ -157,7 +157,7 @@
   The first diagram shows the classes responsible for the scene management.
   - *Scene* is an enum which holds all scenes.
   - *SceneLoader* loads the scenes.
-  - *IntroManager* checks if the MainScene should be loaded.
+  - *IntroManager* checks if the MainScene should be loaded.<br>
   ![image](./UMLs/Scenes.png)
 
   The second diagram focuses on the Event System.
@@ -232,7 +232,7 @@ A demo video documenting all features and user interaction can be found in [\sto
 
 
   ### Flickering lights
-  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off as well as the time them staying off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
+  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off as well as the time of them staying off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
 
   ### TV
   After about one and a half minutes the TV will start to play a cute and funny short documentary about a wild hamster, immediately after the video concludes another one will start to play. This second video contains disturbing sounds and images of pigs locked up in a CO2 stunning chamber right before their slaughter. 
@@ -308,15 +308,20 @@ The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-w
 ## Major
 - Increase in intensity
   - Increasing frequency and intensity of game events (for example rain, lightning/thunder)
+  - Lighting: Starting with all lights on. After some time lights start to turn off. The frequency and length of these outages increases until all lights will shut down.
+  - TV: After a short time a cute video clip of a hamster starts playing followed by a disturbing video of pigs in a CO2 chamber.
+  - Rain, Thunder, Lightning: Starting with no rain. After some time it starts raining and after even more time the rain intensifies and lightnings start to appear. The frequency of lightnigs also increases over time.
 - Interaction with the environment
-  - Can open/close almost all doors, drawers and cabinets
+  - Can open/close almost all doors, drawers, windows and cabinets
   - Can pick up most small objects
+  - Can interact with the tablet
 - Extended documentation
   - UML class diagrams
   - Description of file structure
+  - Description of file structure of Unity MainScene
   - Inline code documentation
 - Debriefing
-  - Short explanation after the ending (See `DebriefingScene`)
+  - Explanation after the ending (See `DebriefingScene`)
 
 ## Minor
 - Polished appearance
@@ -325,9 +330,9 @@ The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-w
     - Lightning
     - Rain
     - Electrical sparks when lights turn off
-  - Volumetric lighting / fog for flashlight
+  - Volumetric lighting/fog for flashlight
   - Skybox
 - Audiovisual and/or haptic features
   - Sound effects on grab for paper notes
-  - Opening and closing sound effects for all doors, drawers and cabinets
+  - Opening and closing sound effects as well as animations for all doors, drawers, windows and cabinets
   - Moving hands near dangerous items (like the gun) causes vibration and maximum vibration on grab
