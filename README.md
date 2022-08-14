@@ -13,8 +13,8 @@
   <summary>This section contains a descriptive overview about the structure and classes of this project.</summary>
 
   ## Directory structure
-  On the top level of the directory structure are mostly default directories. Our relevant code is inside of the *Assets* folder.
-  Inside of this folder the following directory structure can be seen (nested files and directories aren't shown here for clarity):
+  On the top level of the directory structure are mostly default directories. Our relevant code is inside the *Assets* folder.
+  Inside this folder the following directory structure can be seen (nested files and directories aren't shown here for clarity):
   ```
   │
   ├── Baseball Bats\
@@ -45,7 +45,7 @@
   │
   └── XR\
   ```
-  A lot of these directories are packages that we imported for models, animations, audio files etc. *Own Assets* is an exception here, as there are some small models (tablet, notes)that we created ourselfs lying inside this directory. 
+  A lot of these directories are packages that we imported for models, animations, audio files etc. *Own Assets* is an exception here, as there are some small models (tablet, notes)that we created ourselves lying inside this directory. 
   All necessary files, (Meshes, materials, animations, scripts...) are within their respective directory, e.g. the Flashlight files are within the *FLashlights* directory, although the naming of the directories sometimes refers to their imported package name.
   If the necessary files aren't in their respective directory, then they are in the *Brick Project Studio* directory, which forms the baseline of this project, as this package contains the apartment. The directory tree of *Brick Project Studio* looks like this (files are not listed for clarity):
   ```
@@ -205,7 +205,7 @@
           └── Fire\
   ```
   As you can see there are two directories, *Apartment Kit* and *SE Basic Assets*.
-  Latter contains many default files, which we used. We didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files. For example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here aswell as the video clips.
+  Latter contains many default files, which we used. We didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files. For example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here as well as the video clips.
   Despite the fact, that there are quite a few directories in this project, this description focused on the separation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
 
   ## UML Class Diagrams
@@ -289,7 +289,7 @@ A demo video documenting all features and user interaction can be found in [\sto
 
 
   ### Flickering lights
-  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off aswell as the time them staying off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
+  After two minutes the lights start to turn off periodically, making a representative sound and spawning sparks when they do. The frequency of them turning off as well as the time them staying off increases steadily over time until about ten minutes in when you hear the sound of a complete power failure, turning all the lights off for the remainder of the experience.
 
   ### TV
   After about one and a half minutes the TV will start to play a cute and funny short documentary about a wild hamster, immediately after the video concludes another one will start to play. This second video contains disturbing sounds and images of pigs locked up in a CO2 stunning chamber right before their slaughter. 
@@ -360,3 +360,30 @@ We were able to evoke negative emotions but more so stress, anxiousness and tens
 
 # Sources
 The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/wikis/home)
+
+# Requirements
+## Major
+- Increase in intensity
+  - Increasing frequency and intensity of game events (for example rain, lightning/thunder)
+- Interaction with the environment
+  - Can open/close almost all doors, drawers and cabinets
+  - Can pick up most small objects
+- Extended documentation
+  - UML class diagrams
+  - Description of file structure
+  - Inline code documentation
+- Debriefing
+  - Short explanation after the ending (See `DebriefingScene`)
+
+## Minor
+- Polished appearance
+  - HDPR render pipeline
+  - Particle effects
+    - Lightning
+    - Rain
+    - Electrical sparks when lights turn off
+  - Volumetric lighting / fog for flashlight
+- Audiovisual and/or haptic features
+  - Sound effects on grab for paper notes
+  - Opening and closing sound effects for all doors, drawers and cabinets
+  - Moving hands near dangerous items (like the gun) causes vibration and maximum vibration on grab
