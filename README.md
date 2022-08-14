@@ -9,7 +9,7 @@
 5. Press the 'Play'-button
 
 # User interaction
-You will receive a short story intro. You enter your neighbors house while he is away to find evidence against him. To unlock his tablet you need to find 4 paper notes, each of them containing a riddle. Can you crack the code and find out the password?
+A demo video documenting all features and user interaction can be found in [\stoxr-project-2\LabRecordings](https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/courses/special-topics-xr/student-materials/2022-summer/stoxr-project-2/-/blob/main/LabRecordings/stoxr-project-2-video.mp4). You will receive a short story intro. You enter your neighbors house while he is away to find evidence against him. To unlock his tablet you need to find 4 paper notes, each of them containing a riddle. Can you crack the code and find out the password?
 
 ![image](./LabRecordings/intro.jpg)
 
