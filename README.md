@@ -45,87 +45,26 @@
   │
   └── XR\
   ```
-  A lot of these directories are packages that we imported for models, animations, audio files etc. *Own Assets* is an exception here, as there are some small models (tablet, notes)that we created ourselves lying inside this directory. 
+  A lot of these directories are packages that we imported for models, animations, audio files etc. *Own Assets* is an exception here, as there are some small models (tablet, notes) that we created ourselves lying inside this directory. 
   All necessary files, (Meshes, materials, animations, scripts...) are within their respective directory, e.g. the Flashlight files are within the *FLashlights* directory, although the naming of the directories sometimes refers to their imported package name.
   If the necessary files aren't in their respective directory, then they are in the *Brick Project Studio* directory, which forms the baseline of this project, as this package contains the apartment. The directory tree of *Brick Project Studio* looks like this (files are not listed for clarity):
   ```
   │
   ├── Apartment Kit\
   │   │
-  │   ├── Materials\
+  │   ├── Materials\ <- imported scripts from the apartment asset and our own custom materials
   │   │   │
-  │   │   ├── Interior Exterior\
-  │   │   │
-  │   │   ├── Misc\
-  │   │   │   │
-  │   │   │   └── Materials\
-  │   │   │
-  │   │   │
-  │   │   └── Surface\
+  │   │   └── ...
   │   │
+  │   ├── Models\ <- all models of the imported apartment asset
   │   │
-  │   ├── Models\
+  │   ├── Prefabs\ <- all imported prefabs from the apartment asset
+  │   │   │
+  │   │   └── ...
   │   │
-  │   ├── Prefabs\
-  │   │   │
-  │   │   ├── Apt Build Kit\
-  │   │   │   │
-  │   │   │   ├── Exteriors\
-  │   │   │   │   │
-  │   │   │   │   └── Ext_Apt_01\
-  │   │   │   │
-  │   │   │   │
-  │   │   │   └── Interiors\
-  │   │   │       │
-  │   │   │       ├── Flooring & Ceilings\
-  │   │   │       │
-  │   │   │       ├── Frames Windows & Doors\
-  │   │   │       │
-  │   │   │       ├── Wall Tiles\
-  │   │   │       │
-  │   │   │       └── Walls Frames & Doors\
-  │   │   │
-  │   │   │
-  │   │   │
-  │   │   ├── Furniture\
-  │   │   │   │
-  │   │   │   ├── Bathroom\
-  │   │   │   │
-  │   │   │   ├── Bedroom\
-  │   │   │   │
-  │   │   │   ├── Kitchen\
-  │   │   │   │   │
-  │   │   │   │   ├── Appliances\
-  │   │   │   │   │
-  │   │   │   │   └── Cabinets\
-  │   │   │   │
-  │   │   │   │
-  │   │   │   ├── Living Room\
-  │   │   │   │
-  │   │   │   └── Wine Cabinet\
-  │   │   │
-  │   │   │
-  │   │   ├── Props\
-  │   │   │   │
-  │   │   │   ├── Art\
-  │   │   │   │
-  │   │   │   ├── Bathroom\
-  │   │   │   │
-  │   │   │   ├── Electronics\
-  │   │   │   │
-  │   │   │   ├── Lighting\
-  │   │   │   │
-  │   │   │   ├── Misc\
-  │   │   │   │
-  │   │   │   └── Wine Liquor Beer and Glassware - Sample\
-  │   │   │
-  │   │   │
-  │   │   └── Structures\
-  │   │
-  │   │
-  │   ├── Scenes\
+  │   ├── Scenes\ <- includes all relevant scenes (IntroScene, MainScene, DebriefingScene)
   │   │   
-  │   ├── Scripts & Animation\
+  │   ├── Scripts & Animation\ <- imported scripts of the apartment asset and our own scripts
   │   │   │
   │   │   ├── Closet\
   │   │   │
@@ -151,62 +90,66 @@
   │   │   │
   │   │   └── Z Axis -1\
   │   │
+  │   ├── Sounds\ <- all sound effects we added
   │   │
-  │   ├── Sounds\
+  │   ├── Textures\ <- the imported textures of the apartment asset and our own custom textures
+  │   │   │
+  │   │   └── ... 
   │   │
-  │   ├── Textures\
-  │   │   │
-  │   │   ├── Interior Exterior\
-  │   │   │
-  │   │   ├── Misc\
-  │   │   │   │
-  │   │   │   └── Materials\
-  │   │   │
-  │   │   │
-  │   │   └── Surface\
-  │   │
-  │   │
-  │   └── Videos\
+  │   └── Videos\ <- the video clips played on the in game TV
   │
-  │
-  └── SE Basic Assets\
+  └── SE Basic Assets\ <- this folder only contains imported files from the apartment asset like prefabs
       │
-      ├── Materials\
-      │   │
-      │   └── Fire\
-      │
-      │
-      ├── Models\
-      │   │
-      │   └── Build Kits\
-      │
-      │
-      ├── Prefabs\
-      │   │
-      │   └── Fire\
-      │
-      │
-      ├── Scripts and Animations\
-      │   │
-      │   ├── Doors\
-      │   │
-      │   ├── Drawer\
-      │   │   │
-      │   │   ├── X Axis\
-      │   │   │
-      │   │   └── Z Axis\
-      │   │
-      │   │
-      │   └── Windows\
-      │
-      │
-      └── Textures\
-          │
-          └── Fire\
+      └── ...
   ```
-  As you can see there are two directories, *Apartment Kit* and *SE Basic Assets*.
-  Latter contains many default files, which we used. We didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files. For example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here as well as the video clips.
-  Despite the fact, that there are quite a few directories in this project, this description focused on the separation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
+  There are two directories, *Apartment Kit* and *SE Basic Assets*.
+  The latter contains many default files, which we used but we didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files, for example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here as well as the video clips.
+  Despite the fact that there are quite a few directories in this project, this description focused on the separation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
+
+  ## MainScene hierarchy (top level)
+  ```
+  MainScene
+  │ 
+  ├── GameEventManager <- Handels all in game events like rain and TV
+  │
+  ├── blood <- Blood splatters that show on tablet after ending gun shot
+  │
+  ├── Tablet
+  │
+  ├── Clues <- All four paper clues with riddles
+  │
+  ├── DangerousObjects <- Weapons and money, vibrate when you get near them
+  │
+  ├── MainHouse <- All structure (walls, floor, ceiling) and furniture of the main house you start in
+  │
+  ├── GlobalLightningLight <- Directional light at intensity 0, gets set intensity on lightning
+  │
+  ├── RainEffect <- rain particle system
+  │
+  ├── Base Scene <- floor around the house
+  │
+  ├── Lightning <- lightning and thunder particle system
+  │
+  ├── PlayerController <- OVR player with camera rig
+  │
+  ├── spider 
+  │
+  ├── Flashlight
+  │
+  ├── Sky and Fog Volume <- contains info for skybox and fog volume for volumetric flashlight light
+  │
+  ├── ExternalStructure1 <- house structure next to main house you can see from window
+  │
+  ├── ExternalStructure2 <- house structure next to main house you can see from window
+  │
+  ├── EventSystem <- was generated by previous tablet input (probably not needed anymore)
+  │
+  ├── GeneratorAudio <- audio source of generator fallout when all lights turn off
+  │
+  ├── GunSounds <- audio source for ending gun shot
+  │
+  └── Translators <- I AM GOLDEN game objects
+  ```
 
   ## UML Class Diagrams
   To get an overview of the code architecture of this project, we list UML class diagrams of the classes we created. All classes listed here have additional comments about their functionality in their code files. <br>
@@ -383,6 +326,7 @@ The sources can be seen on the [wiki home page](https://gitlab2.informatik.uni-w
     - Rain
     - Electrical sparks when lights turn off
   - Volumetric lighting / fog for flashlight
+  - Skybox
 - Audiovisual and/or haptic features
   - Sound effects on grab for paper notes
   - Opening and closing sound effects for all doors, drawers and cabinets
