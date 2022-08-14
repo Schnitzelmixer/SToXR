@@ -206,11 +206,32 @@
   ```
   As you can see there are two directories, *Apartment Kit* and *SE Basic Assets*.
   Latter contains many default files, which we used. We didn't add any files inside this directory. The *Apartment Kit* directory on the other hand contains many important files. For example the *Scripts & Animations* directory holds important scripts and animations, that aren't necessarily bound to imported packages. Also, the *Scenes* directory with our Scenes is located here aswell as the video clips.
-  Despite the fact, that there are quite a few directories in this project, this description focused on the seperation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
+  Despite the fact, that there are quite a few directories in this project, this description focused on the separation of default packages and relevant files. There could be a few unused directories of early development stages, which can be ignored.
 
   ## UML Class Diagrams
+  To get an overview of the code architecture of this project, we list UML class diagrams of the classes we created. All classes listed here have additional comments about their functionality in their code files. <br>
+
+  The first diagram shows the classes responsible for the scene management.
+  - *Scene* is an enum which holds all scenes.
+  - *SceneLoader* loads the scenes.
+  - *IntroManager* checks if the MainScene should be loaded.
   ![image](./UMLs/Scenes.png)
+
+  The second diagram focuses on the Event System.
+  - *GameEventManager* manages all timed events, meaning that certain events get queued and set active after a specified delay.
+  - *flicker_lights* controls the flickering of the apartment lights.
+  - *spider_behavior* manages the behavior and animations of the spider.
+  - *GrabbableWithSound* manages the Grabs on grabbable objects.
+  - *GrabbableClues* inherits from *GrabbableWithSound* and has special behavior for the clues (notes)
   ![image](./UMLs/GameEventManager.png)
+
+  In the third diagram are all individual scripts, that aren't bound to timers and therefore not bound to the *GameEventManager* system.
+  - *TabletFunctionality* controls the interactions with the tablet (numpad)
+  - *ButtonTrigger* is for the individual buttons on the numpad of the tablet and calls NumberPressed() of *TabletFunctionality*
+  - *OpenAndClose* is bound to all Gameobjects that can be opened or closed with individual animations and sounds.
+  - *flashlight_logic* manages the behavior of the flashlight.
+  - *LightningTrigger* contains the logic of the collision.
+  - *GrabbableDangerous*
   ![image](./UMLs/IndividualScripts.png)
 </details> 
 
