@@ -1,3 +1,8 @@
+# Note
+Git lfs has been used to upload this project.
+To export from lfs to normal files run git lfs 'migrate export --include "*"' 
+![Stackoverflow issue](https://stackoverflow.com/questions/63408225/files-have-become-unreadbale-post-git-lfs-migrate-import-how-to-undo)
+
 # How to start
 1. Clone/fork this repository  
 2. Open the root of this repository in Unity
